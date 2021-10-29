@@ -24,6 +24,7 @@ html,body{
 				background: #ffffff;
 				transition: .85s timer;
 				margin-left: 55px;
+				padding: 5px;
 			}
 			.turnhighlight{
 				background: #5cb85c !important;
@@ -59,6 +60,7 @@ html,body{
 				font-size: 30pt;
 				cursor: pointer;
 				z-index: 1;
+				background: rgb(210, 180, 140);
 			}
 			.gamecell:hover{
 				color: #ffffff;
@@ -67,8 +69,8 @@ html,body{
 				transform: translate(10px, -10px);
 				animation: neonBlueText 1.5s ease-in-out infinite alternate;
 			}
-			.grey{
-				background: rgba(128, 128, 128, 0.8);
+			.orange{
+				background: rgba(201, 46, 13);
 			}
 			.green{
 				background: rgba(65, 161, 73) !important;
