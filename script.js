@@ -256,9 +256,9 @@ let main = {
       var startpoint = main.variables.pieces[selectedpiece].position;
       var c1,c2,c3,c4,c5,c6,c7,c8;
 
-      if (main.variables.highlighted.length != 0) {
-        main.methods.togglehighlight(main.variables.highlighted);
-      }
+      //if (main.variables.highlighted.length != 0) {
+        //main.methods.togglehighlight(main.variables.highlighted);
+      //}
 
       switch (main.variables.pieces[selectedpiece].type) {
         case 'w_king':
@@ -275,7 +275,7 @@ let main = {
 
           options = (main.methods.options(startpoint, coordinates, main.variables.pieces[selectedpiece].type)).slice(0);
           main.variables.highlighted = options.slice(0);
-          main.methods.togglehighlight(options);
+          //main.methods.togglehighlight(options);
 
           break;
         case 'b_king':
@@ -296,7 +296,7 @@ let main = {
         */
           options = (main.methods.options(startpoint, coordinates, main.variables.pieces[selectedpiece].type)).slice(0);
           main.variables.highlighted = options.slice(0);
-          main.methods.togglehighlight(options);
+          //main.methods.togglehighlight(options);
 
           break;
         case 'w_queen':
@@ -314,7 +314,7 @@ let main = {
           
           options = coordinates.slice(0);
           main.variables.highlighted = options.slice(0);
-          main.methods.togglehighlight(options);
+          //main.methods.togglehighlight(options);
 
           break;
         case 'b_queen':
@@ -332,7 +332,7 @@ let main = {
             
             options = coordinates.slice(0);
             main.variables.highlighted = options.slice(0);
-            main.methods.togglehighlight(options);
+            //main.methods.togglehighlight(options);
   
             break;
         
@@ -347,7 +347,7 @@ let main = {
 
           options = coordinates.slice(0);
           main.variables.highlighted = options.slice(0);
-          main.methods.togglehighlight(options);
+          //main.methods.togglehighlight(options);
 
           break;
         
@@ -362,7 +362,7 @@ let main = {
 
           options = coordinates.slice(0);
           main.variables.highlighted = options.slice(0);
-          main.methods.togglehighlight(options);
+          //main.methods.togglehighlight(options);
           break;
         case 'w_knight':
 
@@ -372,7 +372,7 @@ let main = {
 
           options = (main.methods.options(startpoint, coordinates, main.variables.pieces[selectedpiece].type)).slice(0);
           main.variables.highlighted = options.slice(0);
-          main.methods.togglehighlight(options);
+          //main.methods.togglehighlight(options);
 
           break;
         case 'b_knight':
@@ -383,7 +383,7 @@ let main = {
 
           options = (main.methods.options(startpoint, coordinates, main.variables.pieces[selectedpiece].type)).slice(0);
           main.variables.highlighted = options.slice(0);
-          main.methods.togglehighlight(options);
+          //main.methods.togglehighlight(options);
 
           break;
         case 'w_rook':
@@ -397,7 +397,7 @@ let main = {
 
           options = coordinates.slice(0);
           main.variables.highlighted = options.slice(0);
-          main.methods.togglehighlight(options);
+          //main.methods.togglehighlight(options);
           
           break;
         case 'b_rook':
@@ -411,7 +411,7 @@ let main = {
 
           options = coordinates.slice(0);
           main.variables.highlighted = options.slice(0);
-          main.methods.togglehighlight(options);
+          //main.methods.togglehighlight(options);
           
           break;
         case 'w_pawn':
@@ -433,7 +433,7 @@ let main = {
 
           options = (main.methods.options(startpoint, coordinates, main.variables.pieces[selectedpiece].type)).slice(0);
           main.variables.highlighted = options.slice(0);
-          main.methods.togglehighlight(options);
+          //main.methods.togglehighlight(options);
 
           break;
 
@@ -457,7 +457,7 @@ let main = {
 
           options = (main.methods.options(startpoint, coordinates, main.variables.pieces[selectedpiece].type)).slice(0);
           main.variables.highlighted = options.slice(0);
-          main.methods.togglehighlight(options);
+          //main.methods.togglehighlight(options);
 
           break;
 
@@ -642,7 +642,7 @@ let main = {
         main.variables.pieces[target.name].captured = true;
         /*
         // toggle highlighted coordinates
-        main.methods.togglehighlight(main.variables.highlighted);
+        //main.methods.togglehighlight(main.variables.highlighted);
         main.variables.highlighted.length = 0;
         // set the selected piece to '' again
         main.variables.selectedpiece = '';
@@ -665,7 +665,7 @@ let main = {
 
       /*
       // toggle highlighted coordinates
-      main.methods.togglehighlight(main.variables.highlighted);
+      //main.methods.togglehighlight(main.variables.highlighted);
       main.variables.highlighted.length = 0;
       // set the selected piece to '' again
       main.variables.selectedpiece = '';
@@ -678,7 +678,7 @@ let main = {
         main.variables.turn = 'b';
         
         // toggle highlighted coordinates
-        main.methods.togglehighlight(main.variables.highlighted);
+        //main.methods.togglehighlight(main.variables.highlighted);
         main.variables.highlighted.length = 0;
         // set the selected piece to '' again
         main.variables.selectedpiece = '';
@@ -694,7 +694,7 @@ let main = {
         main.variables.turn = 'w';
 
         // toggle highlighted coordinates
-        main.methods.togglehighlight(main.variables.highlighted);
+        //main.methods.togglehighlight(main.variables.highlighted);
         main.variables.highlighted.length = 0;
         // set the selected piece to '' again
         main.variables.selectedpiece = '';
@@ -710,11 +710,11 @@ let main = {
 
     },
 
-    togglehighlight: function(options) {
-      options.forEach(function(element, index, array) {
-        $('#' + element).toggleClass("green shake-little neongreen_txt");
-      });
-    },
+    /togglehighlight: function(options) {
+      //options.forEach(function(element, index, array) {
+        //$('#' + element).toggleClass("green shake-little neongreen_txt");
+      //});
+    //},
 
   }
 };
@@ -830,7 +830,7 @@ $(document).ready(function() {
     } else if (main.variables.selectedpiece !='' && target.name != 'null' && target.id != selectedpiece.id && selectedpiece.name.slice(0,1) == target.name.slice(0,1)){ // toggle move options
 
       // toggle
-      main.methods.togglehighlight(main.variables.highlighted);
+      //main.methods.togglehighlight(main.variables.highlighted);
       main.variables.highlighted.length = 0;
 
       main.variables.selectedpiece = target.id;
