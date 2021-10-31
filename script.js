@@ -714,7 +714,7 @@ let main = {
       //options.forEach(function(element, index, array) {
       //  $('#' + element).toggleClass("green shake-little neongreen_txt");
       //});
-    },
+    //},
 
   }
 };
