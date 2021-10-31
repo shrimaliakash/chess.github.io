@@ -62,13 +62,13 @@ div *{
 	z-index: 1;
 	background: rgb(210, 180, 140);
 }
-.gamecell:hover{
-	color: #ffffff;
-	background: rgba(37, 88, 220, 0.7);
-	z-index: 2;
-	transform: translate(10px, -10px);
-	animation: neonBlueText 1.5s ease-in-out infinite alternate;
-}
+//.gamecell:hover{
+	//color: #ffffff;
+	//background: rgba(37, 88, 220, 0.7);
+	//z-index: 2;
+	//transform: translate(10px, -10px);
+	//animation: neonBlueText 1.5s ease-in-out infinite alternate;
+//}
 .orange{
 	background: rgba(201, 46, 13);
 }
